@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/j2ee/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>simple</short-name>
+	<uri>/lqy/1803</uri>
+	<description>
+		23333
+	</description>
+
+	<tag>
+		<name>Pager</name>
+		<tag-class>org.fkjava.ims.common.pager.PageApp</tag-class>
+		<description> 分页标签，24中样式，任意切换，百度雅虎等样式都有</description>
+               <!-- 
+          fk:标签前缀
+          pager:标签名字
+          pageIndex：表示当前页码
+          pageSize：每页显示的记录数
+          totalNum：总共多少条
+          submitUrl：提交地址
+          pageStyle : 风格
+        -->
+		<attribute>
+			<name>pageIndex</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>pageSize</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>totalNum</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>submitUrl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>pageStyle</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	
+	
+	<tag>
+		<name>Operas</name>
+		<tag-class>org.fkjava.ims.common.pager.OperasController</tag-class>
+		<description> 控制三级模块</description>
+               <!-- 
+          fk:标签前缀
+          pager:标签名字
+          pageIndex：表示当前页码
+          pageSize：每页显示的记录数
+          totalNum：总共多少条
+          submitUrl：提交地址
+          pageStyle : 风格
+        -->
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		</tag>
+</taglib>
